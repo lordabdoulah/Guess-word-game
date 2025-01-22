@@ -1,0 +1,307 @@
+/* glopal variabes start */
+:root{
+    --main-color: #F54336;
+    --background-page-color: #1B202B;
+    --right-answer-coler: #FF9C0C;
+    --not-right-plase-coler: #0BA78B;
+    --rong-coler: #282E44;
+    --second-color: #EEEDEF;
+    --servies-icon-color: #D5D5D5;
+    --transparent-font-color: #7777770f ;
+    --transition-deu: 0.4s;
+    --slow-transition-deu: 0.7s;
+    --section-padding-top: 70px;
+    --section-padding-bottom: 70px;
+}
+/* glopal variabes end */
+/* glopal rules start*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Cairo", sans-serif;
+    background-color: var(--background-page-color);
+    max-height: 100vh;
+    overflow: hidden;
+
+}
+/* do backgraound */
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* glopal rules end*/
+/* start component */
+/* beger-screns */
+.contener{
+    margin: auto;
+    width: calc(max-content + 200px) ;
+    min-width: 700px;
+}
+/* beg-screns */
+@media (max-width: 1200px) {
+    .contener{
+        width:800px;
+    }
+}
+/* medeam-screns */
+@media (max-width: 979px) {
+    .contener{
+        width: 96%;
+    }
+}
+/* start animation */
+.game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color: #EEEDEF;
+    border-radius: 10px;
+    overflow: hidden;
+    transition-duration: var(--transition-deu);
+}
+.up-move{
+    transform: translate(-50% ,-64%) ;
+}
+h1{
+    padding: 10px 20px;
+    margin: 0 0 10px;
+    background-color: white;
+    text-align: center;
+}
+.game .note {
+    display: block;
+    height: 26px;
+    color: #FF9C0C;
+    text-align: center;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 30px 0 30px;
+}
+.content .gameplay-par ,.content .key-coler{
+    padding: 20px;
+}
+.content .gameplay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.content .gameplay .lupl{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    opacity: 0.6;
+}
+.content .gameplay .lupl h3{
+    width: 60px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+.content .gameplay .lupl .cracter-input{
+    width: 40px;
+    height: 42px;
+    border: none;
+    border-bottom: solid 2px #333;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 24px;
+    caret-color: transparent;
+    margin: 0 5px;
+}
+.content .gameplay .lupl .cracter-input:focus{
+    outline: none;
+    position: relative;
+    transform: translateY(-4px);
+}
+
+.content .gameplay-par .buttonss{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+.content .gameplay-par .buttonss .check ,.content .gameplay-par .buttonss .hint{
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+.content .gameplay-par .buttonss .check{
+    background-color: coral;
+    flex-grow: 1;
+}
+.content .gameplay-par .buttonss .hint{
+    background-color: #0BA78B;
+}
+.content .key-coler{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.content .key-coler h2{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.content .key-coler .box{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.content .key-coler .box .color{
+    width: 30px;
+    height: 30px;
+    border: solid 1px #777;
+}
+.cl1{
+    background-color: var(--right-answer-coler);!important
+}
+.cl2{
+    background-color: var(--not-right-plase-coler);!important
+}
+.cl3{
+    background-color: var(--rong-coler);  !important
+}
+.content .key-coler .box p{
+    font-weight: 600;
+    font-size: 16px;
+}
+.content .key-coler .start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 40px;
+}
+
+.morediv{
+    position: absolute;
+    bottom: 0px;
+    transform: translateY(74%);
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff12;
+    border-radius: 40px;
+    transition-duration: var(--transition-deu);
+}
+.up-move-more{
+    transform: translateY(24px);
+}
+.morediv .more{
+
+    background: #f0f8ff6b;
+    font-weight: bold;
+    color: blueviolet;
+    margin: auto;
+    padding: 8px;
+    width: fit-content;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+.morediv .content{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.morediv .content .moreforever{
+    border-right: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    padding: 0 35px;
+}
+
+.morediv .content .coul{
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+}
+.morediv .content .coul h4{
+    font-size: 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+.morediv .content h4 span{
+    font-size: 10px;
+    color: #7fffd48a;
+}
+.morediv .content .coul ul{
+    margin-left: 10px
+}
+.morediv .content .coul ul li{
+    margin-bottom: 10px;
+}
+.morediv .content .coul ul li .icon{
+    margin-right: 6px;
+    background-color: #EEEDEF;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.morediv .content .coul ul li a{
+    color: #ffffff4a;
+    font-size: 12px;
+}
+
+.morediv .content{}
+
+
+footer{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+}
+
+/* end animation */
+/* small screens (max-width: 769px) */
+@media (max-width: 769px) {
+
+}
+/* تعديلات جافاسكريبت */
+.content .gameplay .opas1 {
+    opacity: 1;
+}
+.content .gameplay .lupl .cracter-input-done{
+    border: none;
+    width: 50px;
+    text-transform: capitalize;
+    color: wheat;
+    border-radius: 2px;
+    margin: auto;
+}
+.disabled{
+    pointer-events: none  !important;  
+}
+.hide{
+    opacity: 0.3           !important;  
+}
+.colwi{
+    color: white !important;
+}
