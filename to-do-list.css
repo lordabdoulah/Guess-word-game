@@ -70,7 +70,7 @@ a{
     transition-duration: var(--transition-deu);
 }
 .up-move{
-    transform: translate(-50% ,-64%) ;
+    transform: translate(-50% , -67%) ;
 }
 h1{
     padding: 10px 20px;
