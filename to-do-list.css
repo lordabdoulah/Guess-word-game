@@ -282,7 +282,48 @@ footer{
 /* end animation */
 /* small screens (max-width: 769px) */
 @media (max-width: 769px) {
-
+    .game {
+        max-height: 85vh;
+        min-width: auto;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .content {
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+        padding: 0;
+    }
+    .content .gameplay {
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+    .content .gameplay-par{
+        padding: 0px;
+    }
+    .content .key-coler {
+        padding: 0;
+    }
+    .content .key-coler h2 {
+        margin-bottom: 10px;
+    }
+    .content .key-coler .box {
+        padding: 5px;
+    }
+    .content .key-coler p {
+        font-size: 14px;
+    }
+    .content .key-coler .start {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    footer{
+        padding:    10px;
+    }
+    .morediv .more{
+        margin-bottom: 20px;
+    }
 }
 /* تعديلات جافاسكريبت */
 .content .gameplay .opas1 {
